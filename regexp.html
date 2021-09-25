@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>JavaScript Email validation</title>
+<style>  
+    body { 
+        text-align: center;
+        background-color: aquamarine;
+    }
+    </style
+
+<!--email validation -->    
+<body>
+    <h1> Email Validation using REGEXP </h1>
+    <div class="body">
+
+    <form onsubmit="return myfun()">
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="text" name="" id="emailcheck">
+        <span id="message"></span>
+      </div>
+      <button class="btn btn-primary">Submit</button>
+      
+    </form>
+    <script type="text/javascript">
+      function myfun() {
+        var email = document.getElementById('emailcheck').value;
+        var pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+        if (pattern.test(email)) {
+          document.getElementById("message").innerHTML = "Email ID is Correct";
+          
+        } else {
+          document.getElementById("message").innerHTML = "Email ID is NOT Correct";
+          return false;
+        }
+      }
+    </script>
+    </style
+  </div>
+</body>
+</html>
